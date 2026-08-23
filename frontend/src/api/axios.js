@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Api = axios.create({
-    baseURL:"http://localhost:3200/api/v1"
+    baseURL:"https://jobportal-y9i2.onrender.com/api/v1"
 })
 
 export default Api
