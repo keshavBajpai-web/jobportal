@@ -27,8 +27,8 @@ const userSignup = async (req, res) => {
       phoneNumber,
       password: hashPassword,
       role,
-      profile:{
-        profilePhoto:cloudResponse.secure_url
+      profile: {
+        profilePhoto: cloudResponse.secure_url
       }
     })
     return res.status(201).json({ message: "Account created successfully", success: true, user })
@@ -67,9 +67,12 @@ const userLogin = async (req, res) => {
       role: userExist.role,
       profile: userExist.profile
     }
-    res.status(200).cookie("token", token,
-      { maxAge: 5 * 24 * 60 * 60 * 1000, httpOnly: true, sameSite: "strict" }).
-      json({ message: "login successfully", success: true, user })
+    res.status(200).cookie("token", token, {
+      maxAge: 5 * 24 * 60 * 60 * 1000,
+      httpOnly: true,
+      secure: true,
+      sameSite: "none"
+    }).json({ message: "login successfully", success: true, user })
   } catch (error) {
     res.status(500).json({ message: "Server error", success: false })
   }
