@@ -9,7 +9,7 @@ const Applicants = () => {
   const params = useParams()
   const dispatch = useDispatch()
   const {applicants} = useSelector(store=>store.application)
-  // console.log(applicants);
+  console.log("applicant",applicants);
   
   useEffect(() => {
     const fetchApplicants = async () => {
@@ -44,7 +44,7 @@ const Applicants = () => {
         </div>
 
         <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
-          {applicants.application.length} Applicants
+          {applicants?.application?.length} Applicants
         </span>
       </div>
 
