@@ -63,7 +63,7 @@ const Job = ({ job }) => {
       <div className="flex flex-wrap gap-2 mt-5">
         <Badge variant="secondary">{job?.position} position</Badge>
         <Badge variant="secondary">{job?.jobType}</Badge>
-        <Badge variant="secondary"> {job?.salary}LPA</Badge>
+        <Badge variant="secondary"> {job?.salary}</Badge>
       </div>
 
       {/* Buttons */}
