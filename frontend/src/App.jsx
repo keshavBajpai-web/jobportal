@@ -16,6 +16,7 @@ import AdminJobs from './components/admin/AdminJobs'
 import PostJob from './components/admin/PostJob'
 import Applicants from './components/admin/Applicants'
 import ProtectedRoute from './components/admin/ProtectedRoute'
+import EditJob from './components/admin/EditJob'
 
 const Layout = () => {
   return (
@@ -59,6 +60,8 @@ const App = () => {
         {path:"/admin/companies/:id",element:<ProtectedRoute><CompanySetup/></ProtectedRoute>},
 
         {path:"/admin/jobs",element:<ProtectedRoute><AdminJobs/></ProtectedRoute>},
+
+        {path:"/admin/editJob/:id",element:<ProtectedRoute><EditJob/></ProtectedRoute>},
 
         {path:"/admin/jobs/post",element:<ProtectedRoute><PostJob/></ProtectedRoute>},
         

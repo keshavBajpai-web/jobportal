@@ -88,7 +88,7 @@ const AdminJobsTable = () => {
                           </PopoverTrigger>
 
                           <PopoverContent className="w-32 p-2 mr-19">
-                            <div onClick={() => navigate(`/admin/companies/${job._id}`)} className="flex items-center gap-2 p-1 rounded-md cursor-pointer hover:bg-gray-100">
+                            <div onClick={() => navigate(`/admin/editJob/${job._id}`)} className="flex items-center gap-2 p-1 rounded-md cursor-pointer hover:bg-gray-100">
 
                               <Edit2 className="h-4 w-4" />
                               <span className="text-sm">Edit</span>
