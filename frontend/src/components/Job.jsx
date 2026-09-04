@@ -64,7 +64,7 @@ const Job = ({ job }) => {
         {/* database */}
         <Badge variant="secondary">{job?.position} position</Badge>
         <Badge variant="secondary">{job?.jobType}</Badge>
-        <Badge variant="secondary"> {job?.salary}</Badge>
+        <Badge variant="secondary"> {job?.salary}LPA</Badge>
       </div>
 
       {/* Buttons */}
