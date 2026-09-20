@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { Bookmark } from "lucide-react";
 import { useNavigate } from "react-router";
 
-const Job = ({ job }) => {
+const   Job = ({ job }) => {
   // console.log("job",job);
   const navigate = useNavigate()
 
